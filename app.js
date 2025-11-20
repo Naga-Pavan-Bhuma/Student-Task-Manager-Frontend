@@ -1,11 +1,13 @@
 const API = "http://localhost:8080/api";
 
+// Load all tasks
 async function loadTasks() {
   const res = await fetch(`${API}/tasks`);
   const tasks = await res.json();
   renderTasks(tasks);
 }
 
+// Add a new task
 async function addTask() {
   const input = document.getElementById("taskInput");
   if (!input) return;
@@ -16,12 +18,18 @@ async function addTask() {
   await fetch(`${API}/tasks`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text })
+    body: JSON.stringify({
+      taskName: text,
+      taskDescription: "",
+      completed: false
+    })
   });
 
   input.value = "";
+  loadTasks();
 }
 
+// Mark task as completed
 async function completeTask(id) {
   await fetch(`${API}/tasks/${id}/complete`, {
     method: "PATCH"
@@ -30,11 +38,10 @@ async function completeTask(id) {
   loadTasks();
 }
 
+// Render tasks in UI
 function renderTasks(tasks) {
   const activeList = document.getElementById("activeList");
   const completedList = document.getElementById("completedList");
-
-  if (!activeList || !completedList) return;
 
   activeList.innerHTML = "";
   completedList.innerHTML = "";
@@ -43,9 +50,9 @@ function renderTasks(tasks) {
 
   tasks.forEach(task => {
     const li = document.createElement("li");
-    li.textContent = task.text;
+    li.textContent = task.taskName; // ✔ FIXED
 
-    if (task.completed) {
+    if (task.completed || task.isCompleted) { // ✔ FIXED
       li.classList.add("completed");
       completed++;
       completedList.appendChild(li);
@@ -54,7 +61,7 @@ function renderTasks(tasks) {
 
       const btn = document.createElement("button");
       btn.textContent = "Complete";
-      btn.onclick = () => completeTask(task.id);
+      btn.onclick = () => completeTask(task.taskId); // ✔ FIXED
 
       li.appendChild(btn);
       activeList.appendChild(li);
@@ -65,14 +72,12 @@ function renderTasks(tasks) {
   document.getElementById("completedCount").textContent = completed;
 }
 
-function addtask(){
-  alert("Your Task has been added")
+function addtask() {
+  alert("Your Task has been added");
 }
-
 
 const addBtn = document.getElementById("addBtn");
 if (addBtn) addBtn.addEventListener("click", addTask);
-
 
 if (document.getElementById("activeList")) {
   loadTasks();
