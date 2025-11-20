@@ -9,3 +9,14 @@ student-task-manager/
 ├─ components
     ├─ read.html # Page that lists tasks (navigated to after clicking Add)
     ├─ task_item.html # Optional reusable task item component
+
+
+Steps
+
+Go to your project folder
+
+Double-click index.html
+
+It will open in your browser
+
+Your app will run normally
