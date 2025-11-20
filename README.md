@@ -7,7 +7,6 @@ student-task-manager/
 └─ README.md
 └─roles.txt
 ├─ components
-    ├─ read.html # Page that lists tasks (navigated to after clicking Add)
     ├─ task_item.html # Optional reusable task item component
 
 
