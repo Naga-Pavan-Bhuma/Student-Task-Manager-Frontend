@@ -8,6 +8,8 @@ async function loadTasks() {
 
 async function addTask() {
   const input = document.getElementById("taskInput");
+  if (!input) return;
+
   const text = input.value.trim();
   if (!text) return;
 
@@ -18,21 +20,24 @@ async function addTask() {
   });
 
   input.value = "";
-  loadTasks();
 }
 
 async function completeTask(id) {
   await fetch(`${API}/tasks/${id}/complete`, {
-    method: 'PATCH'
+    method: "PATCH"
   });
 
   loadTasks();
 }
 
-// UI render logic
 function renderTasks(tasks) {
-  const list = document.getElementById("taskList");
-  list.innerHTML = "";
+  const activeList = document.getElementById("activeList");
+  const completedList = document.getElementById("completedList");
+
+  if (!activeList || !completedList) return;
+
+  activeList.innerHTML = "";
+  completedList.innerHTML = "";
 
   let pending = 0, completed = 0;
 
@@ -41,17 +46,19 @@ function renderTasks(tasks) {
     li.textContent = task.text;
 
     if (task.completed) {
-      li.style.textDecoration = "line-through";
+      li.classList.add("completed");
       completed++;
+      completedList.appendChild(li);
     } else {
       pending++;
+
       const btn = document.createElement("button");
       btn.textContent = "Complete";
       btn.onclick = () => completeTask(task.id);
-      li.appendChild(btn);
-    }
 
-    list.appendChild(li);
+      li.appendChild(btn);
+      activeList.appendChild(li);
+    }
   });
 
   document.getElementById("pendingCount").textContent = pending;
@@ -62,6 +69,11 @@ function markCompleted(){
   alert("Your Task has been completed")
 }
 
-document.getElementById("addBtn").addEventListener("click", addTask);
 
-loadTasks();
+const addBtn = document.getElementById("addBtn");
+if (addBtn) addBtn.addEventListener("click", addTask);
+
+
+if (document.getElementById("activeList")) {
+  loadTasks();
+}
