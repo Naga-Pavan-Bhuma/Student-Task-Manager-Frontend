@@ -10,12 +10,18 @@ It also follows a small component-based structure using a separate `task.html` f
 
 student-task-manager/
 │── index.html # Main entry page
+
 │── app.js # Core JavaScript logic (add, render, delete, complete tasks)
+
 │── style.css # Main stylesheet
+
 │── style.txt # Optional design notes / custom styles
+
 │── roles.txt # Additional notes (optional)
+
 └── components/
-└── task.html # Reusable task UI component
+
+└  ── task.html # Reusable task UI component
 
 yaml
 Copy code
