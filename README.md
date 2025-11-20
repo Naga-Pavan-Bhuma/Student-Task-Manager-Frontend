@@ -1,77 +1,87 @@
-Student Task Manager — Frontend
+# Student Task Manager — Frontend
 
-A simple and lightweight Task Management System built using HTML, CSS, and JavaScript.
-Students can add, complete, and delete tasks with a clean and minimal UI.
-The project follows a small component-based structure using a separate task.html file.
+A simple and user-friendly **Task Management System** built using **HTML, CSS, and JavaScript**.  
+This project allows students to **add**, **mark complete**, and **delete** tasks with a clean interface.  
+It also follows a small component-based structure using a separate `task.html` file.
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
+
 student-task-manager/
-│── index.html          # Main entry page
-│── app.js              # Core JavaScript logic (add, render, delete, complete tasks)
-│── style.css           # Main stylesheet
-│── style.txt           # Optional design notes / custom styles
-│── roles.txt           # Additional notes (optional)
+│── index.html # Main entry page
+│── app.js # Core JavaScript logic (add, render, delete, complete tasks)
+│── style.css # Main stylesheet
+│── style.txt # Optional design notes / custom styles
+│── roles.txt # Additional notes (optional)
 └── components/
-    └── task.html       # Reusable task UI component
+└── task.html # Reusable task UI component
 
-✨ Features
+yaml
+Copy code
 
-➕ Add new tasks
+---
 
-✔️ Mark tasks as completed
+## ✨ Features
 
-❌ Delete tasks
+- ➕ Add new tasks  
+- ✔️ Mark tasks as completed  
+- ❌ Delete tasks  
+- 🎨 Clean and simple user interface  
+- 🧩 Component-based structure using `task.html`  
+- ⚡ No backend or server required — runs directly in the browser  
 
-🎨 Clean and simple UI
+---
 
-🧩 Component-based approach using task.html
+## 🚀 How to Run the Project
 
-⚡ Runs directly in the browser without any server
+### 1. Download the Project
+You can either:
 
-🚀 How to Run the Project
-
-Running the app is very simple — no backend or installation required.
-
-Step 1: Download the Project
-
-Clone the repository:
+📌 Clone the repository:
 
 git clone <your-repo-link>
 
+yaml
+Copy code
 
-OR
+**OR**
 
-Download the ZIP file and extract it.
+📌 Download the ZIP file → Extract it.
 
-Step 2: Open the App
+---
 
+### 2. Open the Application
 Go to the project folder and open:
 
 index.html
 
+yaml
+Copy code
 
 You can:
+- Double-click `index.html`, or  
+- Right-click → **Open With Browser**
 
-Double-click index.html, or
+Your app will run instantly.
 
-Right-click → Open With Browser
+---
 
-That's it — your app will start running!
+## 🧪 How to Use (Testing)
 
-🧪 How to Use (Testing the App)
+After the app opens:
 
-Once the app opens in the browser:
+1. Type a task in the input field  
+2. Click **Add Task**  
+3. Click on a task to mark it **completed**  
+4. Click the **Delete** button to remove a task  
 
-Type a task in the input box
+---
 
-Click Add Task
+## 🛠️ Technologies Used
 
-Click on a task to mark it completed
-
-Click the Delete button to remove a task
-
-🛠️ Technologies Used
-Technology	Purpose
-HTML5	Structure of the app
-CSS3	Styling and layout
-JavaScript (Vanilla JS)	Core functionality (adding/toggling/deleting tasks)
+| Technology | Purpose |
+|-----------|---------|
+| **HTML5** | Structure of the application |
+| **CSS3**  | Styling and layout |
+| **JavaScript (Vanilla JS)** | Task logic (add, render, toggle, delete) |
