@@ -1,95 +1,77 @@
-# Student-Task-Manager-Frontend
+Student Task Manager — Frontend
 
+A simple and lightweight Task Management System built using HTML, CSS, and JavaScript.
+Students can add, complete, and delete tasks with a clean and minimal UI.
+The project follows a small component-based structure using a separate task.html file.
+
+📁 Project Structure
 student-task-manager/
-├─ index.html # Main page to add tasks
-├─ style.css # Optional stylesheet
-├─ app.js # JavaScript logic for adding, rendering, and toggling tasks
-└─ README.md
-└─roles.txt
-├─ components
-    ├─ task_item.html # Optional reusable task item component
-
-
-Steps
-
-Go to your project folder
-
-Double-click index.html
-
-It will open in your browser
-
-Your app will run normally
-
-# Student-Task-Manager-Frontend
-
-student-task-manager
-
-Project Structure
-
-│── index.html        # Main entry file
-│── app.js            # Core JavaScript logic
-│── style.css         # Styling for the web app
-│── style.txt         # Design notes or custom styles (optional)
+│── index.html          # Main entry page
+│── app.js              # Core JavaScript logic (add, render, delete, complete tasks)
+│── style.css           # Main stylesheet
+│── style.txt           # Optional design notes / custom styles
+│── roles.txt           # Additional notes (optional)
 └── components/
-     └── task.html    # Task component UI
+    └── task.html       # Reusable task UI component
 
-Features
+✨ Features
 
-Add new tasks
+➕ Add new tasks
 
-Mark tasks as completed
+✔️ Mark tasks as completed
 
-Delete tasks
+❌ Delete tasks
 
-Clean and simple UI
+🎨 Clean and simple UI
 
-Component-based structure using task.html
+🧩 Component-based approach using task.html
 
-Steps
+⚡ Runs directly in the browser without any server
 
-Go to your project folder
+🚀 How to Run the Project
 
-Double-click index.html
+Running the app is very simple — no backend or installation required.
 
-It will open in your browser
+Step 1: Download the Project
 
-Your app will run normally
+Clone the repository:
 
-How to Run the Project
-
-Follow these steps to run the web app locally:
-
-1. Download or clone the project
-git clone <your-repository-url>
+git clone <your-repo-link>
 
 
-OR simply download the ZIP and extract it.
+OR
 
-2. Open the main file
+Download the ZIP file and extract it.
 
-Go to the project folder and open index.html in any web browser:
+Step 2: Open the App
 
-Double-click index.html
+Go to the project folder and open:
 
-OR right-click → Open With Browser
-
-🧪 Testing the App
-
-Once opened:
-
-Type a task in the input field.
-
-Click Add Task.
-
-Click on a task to mark it completed.
-
-Click the Delete button to remove a task.
+index.html
 
 
-Technologies Used
+You can:
 
-HTML5 – Structure
+Double-click index.html, or
 
-CSS3 – Styling
+Right-click → Open With Browser
 
-JavaScript (Vanilla JS) – Functionality
+That's it — your app will start running!
+
+🧪 How to Use (Testing the App)
+
+Once the app opens in the browser:
+
+Type a task in the input box
+
+Click Add Task
+
+Click on a task to mark it completed
+
+Click the Delete button to remove a task
+
+🛠️ Technologies Used
+Technology	Purpose
+HTML5	Structure of the app
+CSS3	Styling and layout
+JavaScript (Vanilla JS)	Core functionality (adding/toggling/deleting tasks)
