@@ -58,6 +58,10 @@ function renderTasks(tasks) {
   document.getElementById("completedCount").textContent = completed;
 }
 
+function markCompleted(){
+  alert("Your Task has been completed")
+}
+
 document.getElementById("addBtn").addEventListener("click", addTask);
 
 loadTasks();
