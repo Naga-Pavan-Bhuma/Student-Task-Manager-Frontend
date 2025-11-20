@@ -65,8 +65,8 @@ function renderTasks(tasks) {
   document.getElementById("completedCount").textContent = completed;
 }
 
-function markCompleted(){
-  alert("Your Task has been completed")
+function addtask(){
+  alert("Your Task has been added")
 }
 
 
