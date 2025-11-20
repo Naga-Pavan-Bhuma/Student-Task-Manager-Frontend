@@ -1,0 +1,11 @@
+Student Task Manager
+
+Backend
+
+Sampath -- Spring boot
+Sohail -- Database 
+
+Frontend
+
+Pavan -- Static Files
+Varnika -- HTML Files
