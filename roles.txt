@@ -7,5 +7,5 @@ Sohail -- Database
 
 Frontend
 
-Pavan -- Static Files
+Pavan -- CSS/JS Files
 Varnika -- HTML Files
